@@ -91,8 +91,7 @@ header {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
-.header-fedback + .header-fedback {
+.nav-item .header-fedback + .header-fedback {
   margin-left: 50px;
 }
 .header-fedback {
@@ -102,8 +101,6 @@ header {
   fill: var(--main-text-color);
 }
 .envelope-icon {
-  height: 12px;
-  width: 16px;
   margin-right: 10px;
 }
 .smarphone-icon {
@@ -222,6 +219,7 @@ footer address {
   margin-bottom: 100px;
   padding-top: 20px;
 }
+.social-background:focus,
 .social-background:hover {
   background-color: var(--accent-color);
 }
@@ -249,7 +247,6 @@ footer address {
 .main-section {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--dark-background-color);
   text-align: center;
   letter-spacing: 0.06em;
 }
@@ -259,8 +256,13 @@ footer address {
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid black;
-  background-image: url("../optim-backgrounds/overlay\ .jpg");
-  background-color: linear-gradient(rgba(47, 48, 58, 0.4));
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0),
+      rgba(38, 38, 43, 0.4)
+    ),
+    url("../optim-backgrounds/overlay\ .jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -424,6 +426,7 @@ footer address {
   width: 20px;
 }
 .social:hover,
+.social:focus,
 .social-radius:hover,
 .social-radius:focus {
   background-color: var(--accent-color);
@@ -569,8 +572,15 @@ footer address {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.galeria-images:hover,
-.galeria-images:focus {
+/* ховає обводку при фокусі в галереї */
+/* .galeria-images:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+} */
+.galeria-images a:focus,
+.galeria-images a:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
