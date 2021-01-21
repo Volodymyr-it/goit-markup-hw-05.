@@ -168,7 +168,6 @@ footer {
   margin-top: 60px;
   font-size: 26px;
   line-height: 1.2;
-
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   display: inline-block;
@@ -206,9 +205,7 @@ footer address {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: var(--primary-white-color);
-
   letter-spacing: 0.03em;
 }
 .footer-socials {
@@ -219,8 +216,14 @@ footer address {
   margin-bottom: 100px;
   padding-top: 20px;
 }
-.social-background:focus,
-.social-background:hover {
+.social-background {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.footer-accent:hover .social-background,
+.footer-accent:focus .social-background {
   background-color: var(--accent-color);
 }
 .footer-icon {
@@ -230,11 +233,7 @@ footer address {
   width: 20px;
   height: 20px;
 }
-.social-background {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 12px;
-  border-radius: 50%;
-}
+
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -256,10 +255,10 @@ footer address {
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid black;
-
+  background: #1d1d1c;
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0),
+      rgba(47, 48, 58, 0.4),
       rgba(38, 38, 43, 0.4)
     ),
     url("../optim-backgrounds/overlay\ .jpg");
@@ -447,7 +446,6 @@ footer address {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 94px;
 }
 
 .partner-logotyp + .partner-logotyp {
@@ -495,8 +493,8 @@ footer address {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 94px;
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 .regular-customers h2 {
   margin-bottom: 50px;
