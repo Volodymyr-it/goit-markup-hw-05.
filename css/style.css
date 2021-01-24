@@ -115,6 +115,7 @@ header {
   background-color: var(--accent-color);
 }
 .curent-link .header-link::after,
+.header-link:focus::after,
 .header-link:hover::after {
   opacity: 1;
 }
