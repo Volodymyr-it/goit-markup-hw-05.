@@ -114,7 +114,7 @@ header {
   transition: opacity var(--animation-duration) var(--animation-type);
   background-color: var(--accent-color);
 }
-
+.curent-link .header-link::after,
 .header-link:hover::after {
   opacity: 1;
 }
