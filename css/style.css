@@ -50,7 +50,7 @@ body {
   font-family: Roboto, sans-serif;
   color: var(--main-text-color);
 }
-button {
+.order-button {
   cursor: pointer;
   border-radius: 4px;
 }
@@ -475,11 +475,9 @@ footer address {
 .partner-logotyp + .partner-logotyp {
   margin-left: 30px;
 }
-.logotyp {
-  display: inline-block;
-}
 
 .logotyp {
+  display: inline-block;
   box-sizing: border-box;
   height: 90px;
   width: 170px;
@@ -539,6 +537,7 @@ footer address {
 .filter-butons button {
   padding: 6px 22px;
   border: 0px;
+  border-radius: 4px;
 }
 .button-item + .button-item {
   margin-left: 9px;
@@ -571,6 +570,8 @@ footer address {
 .portfolio-filter button:hover {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* portfolio-items */
 .portfolio-items h3 {
@@ -637,18 +638,36 @@ footer address {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
-  padding: 8px;
   background-color: var(--primary-white-color);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+}
+
+.modal-close {
+  display: flex;
+  height: 30px;
+  width: 30px;
+}
+
+.backdrop button {
+  display: flex;
+  border-radius: 100%;
+  padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 476px;
+  margin-top: 6px;
+  flex-direction: row;
 }
