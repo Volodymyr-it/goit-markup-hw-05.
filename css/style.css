@@ -22,6 +22,9 @@
   --main-text-color: #757575;
   --title-text-color: #212121;
   --footer-tel-color: rgba(255, 255, 255, 0.6);
+
+  --animation-duration: 250ms;
+  --animation-type: linear;
 }
 /* common */
 .container {
@@ -105,14 +108,20 @@ header {
   width: 100%;
   bottom: 0;
   left: 0;
-  background: #2196f3;
   border-radius: 2px;
   height: 4px;
   opacity: 0;
+  transition: opacity var(--animation-duration) var(--animation-type);
+  background-color: var(--accent-color);
 }
+
 .header-link:hover::after {
   opacity: 1;
 }
+.curent-link {
+  color: var(--accent-color);
+}
+
 .header-fedback {
   display: flex;
   align-items: center;
@@ -135,6 +144,7 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  transition: color var(--animation-duration) var(--animation-type);
 }
 .header-links > .nav-item:not(:last-child) {
   margin-right: 50px;
@@ -150,6 +160,7 @@ header {
 .header-contacts a:hover {
   fill: var(--accent-color);
   color: var(--accent-color);
+  transition: color var(--animation-duration) var(--animation-type);
 }
 .header-contacts {
   margin-left: auto;
@@ -163,12 +174,6 @@ header {
   letter-spacing: 0.02em;
   margin-left: 50px;
   margin-right: auto;
-}
-.header-links .header-fedback {
-  color: var(--main-text-color);
-}
-.header-links .header-fedback:hover {
-  color: var(--accent-color);
 }
 
 /* footer */
@@ -541,6 +546,9 @@ footer address {
 .button-item:hover {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.button-item {
+  transition: color var(--animation-duration) var(--animation-type);
 }
 .galeria-images {
   display: flex;
