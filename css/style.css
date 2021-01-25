@@ -244,6 +244,9 @@ footer address {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 12px;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-accent:hover .social-background,
@@ -433,6 +436,9 @@ footer address {
   fill: #afb1b8;
   padding: 12px;
   border-radius: 50%;
+  transition-property: fill border-color background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials {
   display: flex;
@@ -484,6 +490,9 @@ footer address {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   fill: #afb1b8;
+  transition-property: fill border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-1 {
   padding: 20px 63px;
@@ -548,7 +557,9 @@ footer address {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button-item {
-  transition: color var(--animation-duration) var(--animation-type);
+  ransition-property: fill border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .galeria-images {
   display: flex;
@@ -565,6 +576,9 @@ footer address {
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  transition-property: background-color color box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-filter button:focus,
 .portfolio-filter button:hover {
