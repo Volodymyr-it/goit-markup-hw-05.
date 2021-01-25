@@ -110,14 +110,14 @@ header {
   left: 0;
   border-radius: 2px;
   height: 4px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--animation-duration) var(--animation-type);
   background-color: var(--accent-color);
 }
 .curent-link .header-link::after,
 .header-link:focus::after,
 .header-link:hover::after {
-  opacity: 1;
+  opacity: 0;
 }
 .curent-link {
   color: var(--accent-color);
@@ -392,7 +392,29 @@ footer address {
 .work-images .item + .item {
   margin-left: 30px;
 }
-
+.item {
+  position: relative;
+  margin: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.work-activity {
+  position: absolute;
+  top: 224px;
+  height: 70px;
+  width: 370px;
+  margin: 0;
+  padding-top: 27px;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+/* team */
 .team-images {
   background-color: var(--second-background-color);
   padding: 94px 0;
@@ -406,7 +428,7 @@ footer address {
   text-align: center;
   margin-bottom: 50px;
 }
-/* team */
+
 .team-images h3 {
   color: var(--title-text-color);
   font-weight: 500;
