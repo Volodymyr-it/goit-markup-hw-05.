@@ -458,7 +458,7 @@ footer address {
   fill: #afb1b8;
   padding: 12px;
   border-radius: 50%;
-  transition-property: fill border-color background-color;
+  transition-property: fill border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -628,25 +628,26 @@ footer address {
 .galeria-images {
   display: flex;
   align-items: center;
-  border: 1px solid #eeeeee;
+
   width: 370px;
+  height: 404px;
   margin-right: 30px;
   margin-bottom: 30px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ховає обводку при фокусі в галереї */
-.galeria-images:active,
+.galeria-images a:active,
 :hover,
 :focus {
   outline: 0;
   outline-offset: 0;
 }
-.galeria-images:focus,
-.galeria-images:hover {
+.galeria-images a:focus,
+.galeria-images a:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  border: 1px solid #eeeeee;
 }
+
 .galeria-images:nth-child(3n) {
   margin-right: 0;
 }
@@ -655,6 +656,7 @@ footer address {
 }
 .foto-discription {
   padding: 20px 24px;
+  position: relative;
 }
 .foto-discription h3 {
   margin-bottom: 4px;
@@ -682,7 +684,7 @@ footer address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.galeria-images:hover .galeria-images__thumb p {
+.galeria-images a:hover .galeria-images__thumb p {
   transform: translateY(0);
 
   opacity: 1;
@@ -704,7 +706,7 @@ footer address {
   opacity: 0;
   pointer-events: none;
 }
-.backdrop .is-hidden .modal {
+.backdrop.is-hidden.modal {
   transform: translate(-50%, -50%) scale(1.1);
 }
 .modal {
@@ -713,12 +715,11 @@ footer address {
   left: 50%;
   min-width: 528px;
   min-height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--primary-white-color);
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close {
